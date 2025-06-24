@@ -2,51 +2,118 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Pong
+namespace Pong;
+
+public class Game1 : Game
 {
-    public class Game1 : Game
+    private Texture2D ballTexture;
+    private Vector2 ballPosition;
+    private float ballSpeed;
+    
+    private GraphicsDeviceManager _graphics;
+    private SpriteBatch _spriteBatch;
+
+    public Game1()
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        _graphics = new GraphicsDeviceManager(this);
+        Content.RootDirectory = "Content";
+        IsMouseVisible = true;
+    }
 
-        public Game1()
+
+    // TODO: Add your initialization logic here    
+    protected override void Initialize()
+    {
+        //limit player to borders of the screen
+        ballPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferWidth / 2);
+
+        //speed of player
+        ballSpeed = 100f;
+
+        base.Initialize();
+    }
+
+    protected override void LoadContent()
+    {
+        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        ballTexture = Content.Load<Texture2D>("ball");
+        // TODO: use this.Content to load your game content here
+    }
+
+    protected override void Update(GameTime gameTime)
+    {
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+            Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
+       
+        // The time since Update was called last.
+        float updatedBallSpeed = ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+        var kstate = Keyboard.GetState();
+        
+        if (kstate.IsKeyDown(Keys.Up))
         {
-            _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            ballPosition.Y -= updatedBallSpeed;
+        }
+        
+        if (kstate.IsKeyDown(Keys.Down))
+        {
+            ballPosition.Y += updatedBallSpeed;
+        }
+        
+        if (kstate.IsKeyDown(Keys.Left))
+        {
+            ballPosition.X -= updatedBallSpeed;
+        }
+        
+        if (kstate.IsKeyDown(Keys.Right))
+        {
+            ballPosition.X += updatedBallSpeed;
+        }
+        
+        //Set boundaries for position
+        if (ballPosition.X > _graphics.PreferredBackBufferWidth - ballTexture.Width / 2)
+        {
+            ballPosition.X = _graphics.PreferredBackBufferWidth - ballTexture.Width / 2;
+        }
+        else if (ballPosition.X < ballTexture.Width / 2)
+        {
+            ballPosition.X = ballTexture.Width / 2;
         }
 
-        protected override void Initialize()
+        if (ballPosition.Y > _graphics.PreferredBackBufferHeight - ballTexture.Height / 2)
         {
-            // TODO: Add your initialization logic here
-
-            base.Initialize();
+            ballPosition.Y = _graphics.PreferredBackBufferHeight - ballTexture.Height / 2;
         }
-
-        protected override void LoadContent()
+        else if (ballPosition.Y < ballTexture.Height / 2)
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            ballPosition.Y = ballTexture.Height / 2;
         }
+        
+        base.Update(gameTime);
+    }
 
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+    protected override void Draw(GameTime gameTime)
+    {
+        //Background picture
+        GraphicsDevice.Clear(Color.MonoGameOrange);
 
-            // TODO: Add your update logic here
-
-            base.Update(gameTime);
-        }
-
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
-            base.Draw(gameTime);
-        }
+        // TODO: Add your drawing code here
+        _spriteBatch.Begin();
+        _spriteBatch.Draw(
+            ballTexture,
+            ballPosition,
+            null,
+            Color.White,
+            0f,
+            new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
+            Vector2.One,
+            SpriteEffects.None,
+            0f
+        );
+        _spriteBatch.End();
+        
+        base.Draw(gameTime);
     }
 }
+
