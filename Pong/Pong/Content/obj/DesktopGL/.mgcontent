@@ -4,11 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/ball.png</File>
-    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/logo.png</File>
+    <File>c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/ball.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

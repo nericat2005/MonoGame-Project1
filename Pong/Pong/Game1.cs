@@ -1,119 +1,73 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary;
 
-namespace Pong;
+namespace DungeonSlime;
 
-public class Game1 : Game
+public class Game1 : Core
 {
-    private Texture2D ballTexture;
-    private Vector2 ballPosition;
-    private float ballSpeed;
-    
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    // The MonoGame logo texture
+    private Texture2D _logo;
 
-    public Game1()
+    public Game1() : base("Dungeon Slime", 1280, 720, false)
     {
-        _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
+
     }
 
-
-    // TODO: Add your initialization logic here    
     protected override void Initialize()
     {
-        //limit player to borders of the screen
-        ballPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferWidth / 2);
-
-        //speed of player
-        ballSpeed = 100f;
+        // TODO: Add your initialization logic here
 
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
-        ballTexture = Content.Load<Texture2D>("ball");
         // TODO: use this.Content to load your game content here
+        _logo = Content.Load<Texture2D>("images/logo");
+
+
+        base.LoadContent();
     }
 
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-            Keyboard.GetState().IsKeyDown(Keys.Escape))
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-       
-        // The time since Update was called last.
-        float updatedBallSpeed = ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-        var kstate = Keyboard.GetState();
-        
-        if (kstate.IsKeyDown(Keys.Up))
-        {
-            ballPosition.Y -= updatedBallSpeed;
-        }
-        
-        if (kstate.IsKeyDown(Keys.Down))
-        {
-            ballPosition.Y += updatedBallSpeed;
-        }
-        
-        if (kstate.IsKeyDown(Keys.Left))
-        {
-            ballPosition.X -= updatedBallSpeed;
-        }
-        
-        if (kstate.IsKeyDown(Keys.Right))
-        {
-            ballPosition.X += updatedBallSpeed;
-        }
-        
-        //Set boundaries for position
-        if (ballPosition.X > _graphics.PreferredBackBufferWidth - ballTexture.Width / 2)
-        {
-            ballPosition.X = _graphics.PreferredBackBufferWidth - ballTexture.Width / 2;
-        }
-        else if (ballPosition.X < ballTexture.Width / 2)
-        {
-            ballPosition.X = ballTexture.Width / 2;
-        }
+        // TODO: Add your update logic here
 
-        if (ballPosition.Y > _graphics.PreferredBackBufferHeight - ballTexture.Height / 2)
-        {
-            ballPosition.Y = _graphics.PreferredBackBufferHeight - ballTexture.Height / 2;
-        }
-        else if (ballPosition.Y < ballTexture.Height / 2)
-        {
-            ballPosition.Y = ballTexture.Height / 2;
-        }
-        
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        //Background picture
-        GraphicsDevice.Clear(Color.MonoGameOrange);
+        GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        // TODO: Add your drawing code here
-        _spriteBatch.Begin();
-        _spriteBatch.Draw(
-            ballTexture,
-            ballPosition,
-            null,
-            Color.White,
-            0f,
-            new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
-            Vector2.One,
-            SpriteEffects.None,
-            0f
+        // Begin the sprite batch to prepare for rendering.
+        SpriteBatch.Begin();
+
+         // Draw the texture
+        SpriteBatch.Draw(
+            _logo,              // texture
+            new Vector2(        // position
+                (Window.ClientBounds.Width * 0.5f) - (_logo.Width * 0.5f),
+                (Window.ClientBounds.Height * 0.5f) - (_logo.Height * 0.5f)),
+            null,               // sourceRectangle
+            Color.White,        // color
+            0.0f,               // rotation
+            Vector2.Zero,       // origin
+            1.0f,               // scale
+            SpriteEffects.None, // effects
+            0.0f                // layerDepth
         );
-        _spriteBatch.End();
-        
+
+        // Always end the sprite batch when finished.
+        SpriteBatch.End();
+
         base.Draw(gameTime);
     }
 }
+
 

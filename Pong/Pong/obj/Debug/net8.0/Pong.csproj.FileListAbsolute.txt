@@ -61,4 +61,5 @@ C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\obj\Debug\net8.0\refint\Pon
 C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\obj\Debug\net8.0\Pong.pdb
 C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\obj\Debug\net8.0\Pong.genruntimeconfig.cache
 C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\obj\Debug\net8.0\ref\Pong.dll
-C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\ball.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\ball.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\logo.xnb
