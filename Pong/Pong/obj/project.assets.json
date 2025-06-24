@@ -297,11 +297,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\neric\\Documents\\Pong\\Pong\\Pong.csproj",
+      "projectUniqueName": "C:\\Users\\neric\\Documents\\MonoGame-Project1\\Pong\\Pong\\Pong.csproj",
       "projectName": "Pong",
-      "projectPath": "C:\\Users\\neric\\Documents\\Pong\\Pong\\Pong.csproj",
+      "projectPath": "C:\\Users\\neric\\Documents\\MonoGame-Project1\\Pong\\Pong\\Pong.csproj",
       "packagesPath": "C:\\Users\\neric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\neric\\Documents\\Pong\\Pong\\obj\\",
+      "outputPath": "C:\\Users\\neric\\Documents\\MonoGame-Project1\\Pong\\Pong\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
