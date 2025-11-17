@@ -4,10 +4,28 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/../../../../../Pictures/monogame/atlas.png</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/audio/bounce.wav</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/audio/collect.wav</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/audio/theme.ogg</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/fonts/04B_30_5x.spritefont</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/fonts/04B_30.spritefont</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/fonts/arial-font.spritefont</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/fonts/Courier New.spritefont</File>
     <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/ball.png</File>
+    <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/door.png</File>
     <File>C:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/logo.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>images/atlas.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

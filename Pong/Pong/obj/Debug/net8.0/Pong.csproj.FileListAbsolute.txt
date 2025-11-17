@@ -63,3 +63,18 @@ C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\obj\Debug\net8.0\Pong.genru
 C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\obj\Debug\net8.0\ref\Pong.dll
 C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\ball.xnb
 C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\logo.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\atlas.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\atlas-definition.fx
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\atlas-definition.xml
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\fonts\04B_30.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\fonts\04B_30_5x.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\tilemap-definition.xml
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\audio\bounce.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\audio\collect.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\audio\theme.ogg
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\audio\theme.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\fonts\arial-font.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\images\door.xnb
+C:\Users\neric\Documents\MonoGame-Project1\Pong\Pong\bin\Debug\net8.0\Content\fonts\Courier New.xnb

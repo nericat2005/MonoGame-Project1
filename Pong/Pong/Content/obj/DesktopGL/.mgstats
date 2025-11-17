@@ -1,2 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/ball.png","c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/bin/DesktopGL/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0.5346629
+"c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/atlas.png","c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/bin/DesktopGL/images/atlas.xnb","TextureProcessor","Texture2DContent",590,16469,0.3281895
+"c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/ball.png","c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/bin/DesktopGL/images/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0.0136182
+"c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/logo.png","c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/bin/DesktopGL/images/logo.xnb","TextureProcessor","Texture2DContent",16734,311381,0.0549894

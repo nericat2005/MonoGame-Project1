@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/ball.png</SourceFile>
+  <SourceFile>c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/images/ball.png</SourceFile>
   <SourceTime>2025-05-02T11:25:38.6772009-04:00</SourceTime>
-  <DestFile>c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/bin/DesktopGL/ball.xnb</DestFile>
-  <DestTime>2025-06-24T16:36:04.5113516-04:00</DestTime>
+  <DestFile>c:/Users/neric/Documents/MonoGame-Project1/Pong/Pong/Content/bin/DesktopGL/images/ball.xnb</DestFile>
+  <DestTime>2025-11-15T02:22:01.0289217-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-04-05T06:10:54-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
